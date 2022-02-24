@@ -100,6 +100,8 @@ public class CSVArchivo {
 							
 							TVentas = TVentas * totalparts;
 							
+							
+							
 							}
 						found = true;
 						break;
@@ -112,7 +114,7 @@ public class CSVArchivo {
 				
 			}else {
 				System.out.println("    \n [Listo]");
-				
+				System.out.println();
 				System.out.println("\n El total de Ventas es:  " + TVentas);
 				
 			}
