@@ -60,8 +60,11 @@ public class CSVArchivo {
 		try {
 			
 			BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+			
 			BufferedReader reader = new BufferedReader(new FileReader("src/Source/data.csv"));
-			System.out.println("Incerte numero de Factura: ");
+			
+			System.out.println("Incerte Numero De Factura O Un Dato Especifico De La Venta: ");
+			
 			String Venta = in.readLine();
 			boolean found = false;
 			String line = null;
@@ -75,13 +78,12 @@ public class CSVArchivo {
 					TVentas = 0;
 					
 					if(Venta.compareTo(parts[i]) == 0) {
+						
 						System.out.println(" [Se encontró la venta]");
+						
 						for(int j = 0; j < totalparts; j++){ 
+							
 							System.out.print(parts[ j ] + ", ");
-							
-							TVentas *= totalparts;
-							
-							//System.out.println("\n la mul de " + TVentas);
 							
 							}
 						found = true;
@@ -91,22 +93,17 @@ public class CSVArchivo {
 				} //TotalVentas
 				for(int i=0;i<totalparts;i++) {
 					
+					
 					TVentas = 0;
 					
 						for(int j = 0; j < totalparts; j++){ 
 							
-							TVentas *= totalparts;
-							
-							//System.out.println("\n la mul de " + TVentas);
+							TVentas = TVentas * totalparts;
 							
 							}
 						found = true;
 						break;
-						
-					
-				}
-				
-										
+				}					
 				
 			}
 			if(found == false) {
@@ -114,7 +111,7 @@ public class CSVArchivo {
 				System.out.println("No se encuentra");
 				
 			}else {
-				System.out.println(" \n [Listo]");
+				System.out.println("    \n [Listo]");
 				
 				System.out.println("\n El total de Ventas es:  " + TVentas);
 				
