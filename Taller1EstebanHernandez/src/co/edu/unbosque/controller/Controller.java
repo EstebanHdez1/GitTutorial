@@ -13,7 +13,7 @@ public class Controller {
 		
 		CSVArchivo arch = new CSVArchivo();
 		
-		//arch.leer();
+		arch.leer();
 		arch.BuscarFactura();
 		
 	}
